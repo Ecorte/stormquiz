@@ -387,6 +387,6 @@ fn main() {
         }
 
         // Poll the clipboard at regular intervals (e.g., every 2 seconds).
-        std::thread::sleep(Duration::from_secs(2));
+        std::thread::sleep(Duration::from_secs(1));
     }
 }
