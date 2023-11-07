@@ -59,7 +59,7 @@ fn main() {
                 },
                 QnA {
                     question: "I can be the sun, a bird, or simply sand. What am i".to_string(),
-                    answer: "clock ".to_string(),
+                    answer: "clock".to_string(),
                 },
                 QnA {
                     question: "What’s the number that come after 8425".to_string(),
@@ -111,7 +111,7 @@ fn main() {
                 },
                 QnA {
                     question: "What’s the number that come before 8425".to_string(),
-                    answer: "8424 ".to_string(),
+                    answer: "8424".to_string(),
                 },
                 QnA {
                     question: "What’s the universal answer".to_string(),
@@ -163,7 +163,7 @@ fn main() {
                 },
                 QnA {
                     question: "Say my name".to_string(),
-                    answer: "heisenberg ".to_string(),
+                    answer: "heisenberg".to_string(),
                 },
                 QnA {
                     question: "Do chu ffink i’m cuwute UwU".to_string(),
@@ -360,7 +360,7 @@ fn main() {
                 },
                 QnA {
                     question: "What country does anime come from".to_string(),
-                    answer: "japan ".to_string(),
+                    answer: "japan".to_string(),
                 },
                 QnA {
                     question: "How many types of Pokémon are there".to_string(),
