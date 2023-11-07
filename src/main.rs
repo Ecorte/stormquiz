@@ -24,6 +24,15 @@ fn find_closest_match<'a>(input: &str, qna_vec: &'a Vec<QnA>) -> Option<&'a QnA>
     closest_match
 }
 
+fn is_answer_in_qna_list(answer: &str, qna_list: &Vec<QnA>) -> bool {
+    for qna in qna_list {
+        if qna.answer == answer {
+            return true; // The answer is in the qna_list
+        }
+    }
+    false // The answer is not in the qna_list
+}
+
 fn main() {
     let mut clipboard: ClipboardContext = ClipboardProvider::new().unwrap();
     let mut current_contents = clipboard.get_contents().unwrap();
@@ -359,16 +368,20 @@ fn main() {
                 },
             ];
 
-            match find_closest_match(current_contents.as_str(), &qna_list) {
-                Some(qna) => {
-                    println!(
-                        "Closest match: Question: {} Answer: {}",
-                        qna.question, qna.answer
-                    );
-                    clipboard.set_contents(qna.answer.clone()).unwrap();
-                }
-                None => {
-                    println!("No matching question found.");
+            if is_answer_in_qna_list(&current_contents, &qna_list) {
+                println!("The answer is in the qna_list");
+            } else {
+                match find_closest_match(current_contents.as_str(), &qna_list) {
+                    Some(qna) => {
+                        println!(
+                            "Closest match: Question: {} Answer: {}",
+                            qna.question, qna.answer
+                        );
+                        clipboard.set_contents(qna.answer.clone()).unwrap();
+                    }
+                    None => {
+                        println!("No matching question found.");
+                    }
                 }
             }
         }
