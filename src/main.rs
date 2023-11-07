@@ -119,7 +119,7 @@ fn main() {
                 },
                 QnA {
                     question: "What’s the capital of Australia".to_string(),
-                    answer: "camberra".to_string(),
+                    answer: "canberra".to_string(),
                 },
                 QnA {
                     question: "What does http stand for".to_string(),
@@ -348,11 +348,11 @@ fn main() {
                 },
                 QnA {
                     question: "It belongs to you, but other people use it more than you do. What is it".to_string(),
-                    answer: "your name".to_string(),
+                    answer: "name".to_string(),
                 },
                 QnA {
                     question: "I follow you all the time and copy your every move, but you can’t touch me or catch me. What am I".to_string(),
-                    answer: "your shadow".to_string(),
+                    answer: "shadow".to_string(),
                 },
                 QnA {
                     question: "What can you break, even if you never pick it up or touch it".to_string(),
